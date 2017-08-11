@@ -12,7 +12,7 @@ class Main extends Component {
                                 전정재활운동
                             </h1>
                             <small>
-                                열심히 운동합시다!
+                                열심히 운동해서 같이 나아요!
                             </small>
                         </div>
                     </div>

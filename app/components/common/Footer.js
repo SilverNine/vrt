@@ -5,10 +5,10 @@ class Footer extends React.Component {
         return (
             <div className="footer">
                 <div className="pull-right">
-                    10GB of <strong>250GB</strong> Free.
+                    <strong>akasilvernine@gmail.com</strong>
                 </div>
                 <div>
-                    <strong>Copyright</strong> Example Company &copy; 2015-2017
+                    <strong>전정재활운동</strong> 열심히 운동해서 같이 나아요!
                 </div>
             </div>
         )
