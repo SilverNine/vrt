@@ -12,7 +12,7 @@ class Main extends Component {
                                 전정재활운동
                             </h1>
                             <small>
-                                전정재활운동을 도와보자.
+                                열심히 운동합시다!
                             </small>
                         </div>
                     </div>
