@@ -9,10 +9,10 @@ class Main extends Component {
                     <div className="col-lg-12">
                         <div className="text-center m-t-lg">
                             <h1>
-                                전정 재활
+                                전정재활운동
                             </h1>
                             <small>
-                                열심히 운동해서 같이 나아요!
+                                열심히 해서 같이 나아요!
                             </small>
                         </div>
                     </div>

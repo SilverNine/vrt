@@ -8,7 +8,7 @@ class Footer extends React.Component {
                     <strong>akasilvernine@gmail.com</strong>
                 </div>
                 <div>
-                    <strong>전정 재활</strong> 열심히 운동해서 같이 나아요!
+                    <strong>전정재활운동</strong> 열심히 해서 같이 나아요!
                 </div>
             </div>
         )
