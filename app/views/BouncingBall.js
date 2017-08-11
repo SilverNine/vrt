@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import $ from 'jquery';
 
 const style = {
@@ -21,7 +21,7 @@ class BouncingBall extends Component {
         )
     }
 
-    componentDidMount(){
+    componentDidMount() {
         var canvas = {
             element: document.getElementById('canvas'),
             width: $(".wrapper").width(),
