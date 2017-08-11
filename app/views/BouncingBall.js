@@ -24,8 +24,8 @@ class BouncingBall extends Component {
     componentDidMount(){
         var canvas = {
             element: document.getElementById('canvas'),
-            width: 600,
-            height: 700,
+            width: $(".wrapper").width(),
+            height: $("#page-wrapper").height() - 180,
             initialize: function () {
                 this.element.style.width = this.width + 'px';
                 this.element.style.height = this.height + 'px';
