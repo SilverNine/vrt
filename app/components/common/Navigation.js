@@ -36,11 +36,14 @@ class Navigation extends Component {
                             </div>
                         </li>
                         <li className={this.activeRoute("/main")}>
-                            <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">Main view</span></Link>
+                            <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">Welcome</span></Link>
                         </li>
-                        <li className={this.activeRoute("/minor")}>
+                        <li className={this.activeRoute("/bouncingBall")}>
+                            <Link to="/bouncingBall"><i className="fa fa-th-large"></i> <span className="nav-label">BouncingBall</span></Link>
+                        </li>
+                        {/*<li className={this.activeRoute("/minor")}>
                             <Link to="/minor"><i className="fa fa-th-large"></i> <span className="nav-label">Minor view</span></Link>
-                        </li>
+                        </li>*/}
                     </ul>
 
             </nav>

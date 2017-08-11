@@ -9,10 +9,10 @@ class Main extends Component {
                     <div className="col-lg-12">
                         <div className="text-center m-t-lg">
                             <h1>
-                                Welcome in INSPINIA ReactJS Seed Project
+                                전정재활운동
                             </h1>
                             <small>
-                                It is an application skeleton for a typical web app. You can use it to quickly bootstrap your webapp projects.
+                                전정재활운동을 도와보자.
                             </small>
                         </div>
                     </div>

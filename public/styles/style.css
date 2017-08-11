@@ -8560,3 +8560,8 @@ body.md-skin {
     margin: 0;
   }
 }
+.ball {
+  background-color: black;
+  position: relative;
+  border-radius: 50%;
+}
