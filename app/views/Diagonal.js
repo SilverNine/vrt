@@ -4,6 +4,13 @@ import noUiSlider from 'nouislider';
 import Slider from '../components/common/Slider';
 
 class Diagonal extends Component {
+    closeModal(e) {
+        e.preventDefault();
+        $("#modal").fadeOut( "slow", function() {
+
+        });
+    }
+
     render() {
         return (
             <div className="wrapper wrapper-content animated fadeInRight">
@@ -17,6 +24,32 @@ class Diagonal extends Component {
                         </div>
                     </div>
                 </div>
+
+
+                <div className="modal inmodal" id="modal" role="dialog" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content animated fadeIn">
+                            <div className="modal-header">
+                                <i className="fa fa-clock-o modal-icon"></i>
+                                <h4 className="modal-title">대각선 안구운동</h4>
+                            </div>
+                            <div className="modal-body">
+                                <p>
+                                    <strong>눈으로 공을 따라가도록 합니다.</strong><br/>
+                                    1.최대 15분을 넘지 않도록 합니다.<br/>
+                                    2.자세한 설명을 넣어보자<br/>
+                                    3.자세한 설명을 넣어보자<br/>
+                                    4.자세한 설명을 넣어보자<br/>
+                                    5.자세한 설명을 넣어보자<br/>
+                                </p>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-white" onClick={this.closeModal}>Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         )
     }
@@ -100,6 +133,11 @@ class Diagonal extends Component {
             canvas.initialize();
             ball.initialize();
             ball.draw(0, 0);
+            setTimeout(function () {
+                $("#modal").fadeIn( "slow", function() {
+
+                });
+            }, 500);
         }, 200);
     }
 }
