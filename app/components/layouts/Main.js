@@ -17,7 +17,7 @@ class Main extends React.Component {
 
                 <div id="page-wrapper" className={wrapperClass}>
 
-                    <TopHeader />
+                    {/*<TopHeader />*/}
 
                     {/*<Header />*/}
 

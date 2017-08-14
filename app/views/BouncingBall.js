@@ -1,23 +1,13 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 import noUiSlider from 'nouislider';
-
-const style = {
-    backgroundColor: '#1ab394',
-    margin: '0 0 0 0',
-    padding: '0 0 0 0'
-};
+import Slider from '../components/common/Slider';
 
 class BouncingBall extends Component {
     render() {
         return (
             <div className="wrapper wrapper-content animated fadeInRight">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <p class="font-bold">속도를 적당히 조정 해주세요!</p>
-                        <div id="speedSlider"></div>
-                    </div>
-                </div>
+                <Slider/>
                 <div className="row">
                     <div className="col-lg-12" id="body">
                         <div id="canvas" style={{
@@ -43,7 +33,7 @@ class BouncingBall extends Component {
 
         noUiSlider.create(slider, {
             start: speed,
-            connect: [true, false],
+            connect: "upper",
             range: {
                 'min':  0,
                 'max':  100
@@ -60,7 +50,7 @@ class BouncingBall extends Component {
         var canvas = {
             element: document.getElementById('canvas'),
             width: $(".wrapper").width(),
-            height: $("#page-wrapper").height() - 230,
+            height: $("#page-wrapper").height() - 160,
             initialize: function () {
                 this.element.style.width = this.width + 'px';
                 this.element.style.height = this.height + 'px';
