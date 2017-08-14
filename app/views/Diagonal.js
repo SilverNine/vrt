@@ -137,7 +137,7 @@ class Diagonal extends Component {
                 $("#modal").fadeIn( "slow", function() {
 
                 });
-            }, 500);
+            }, 1000);
         }, 200);
     }
 }
