@@ -23,7 +23,7 @@ class Diagonal extends Component {
 
     componentDidMount() {
         var slider = document.getElementById('speedSlider');
-        var speed = 10;
+        var speed = 20;
         var ballSpeed = 0;
         var timeout, topX, topY;
 
