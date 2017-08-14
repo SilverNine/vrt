@@ -95,9 +95,12 @@ class BouncingBall extends Component {
         };
 
         setBallSpeed();
-        canvas.initialize();
-        ball.initialize();
-        ball.draw(0, 0);
+
+        setTimeout(function () {
+            canvas.initialize();
+            ball.initialize();
+            ball.draw(0, 0);
+        }, 200);
     }
 }
 
