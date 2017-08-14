@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
+import noUiSlider from 'nouislider';
 
 const style = {
-    backgroundColor: '#ccddcc',
+    backgroundColor: '#1ab394',
     margin: '0 0 0 0',
     padding: '0 0 0 0'
 };
@@ -12,8 +13,17 @@ class BouncingBall extends Component {
         return (
             <div className="wrapper wrapper-content animated fadeInRight">
                 <div className="row">
+                    <div className="col-lg-12">
+                        <p class="font-bold">속도를 적당히 조정 해주세요!</p>
+                        <div id="speedSlider"></div>
+                    </div>
+                </div>
+                <div className="row">
                     <div className="col-lg-12" id="body">
-                        <div id="canvas" style={style}>
+                        <div id="canvas" style={{
+                            backgroundColor: '#1ab394',
+                            marginTop: '20px'
+                        }}>
                         </div>
                     </div>
                 </div>
@@ -22,10 +32,35 @@ class BouncingBall extends Component {
     }
 
     componentDidMount() {
+        var slider = document.getElementById('speedSlider');
+        var speed = 10;
+        var ballSpeed = 0;
+        var timeout, topX, topY;
+
+        function setBallSpeed() {
+            ballSpeed = 1000 / ( speed * 9 );
+        }
+
+        noUiSlider.create(slider, {
+            start: speed,
+            connect: [true, false],
+            range: {
+                'min':  0,
+                'max':  100
+            }
+        });
+
+        slider.noUiSlider.on('change', function(values, handle){
+            speed = values[handle];
+            setBallSpeed();
+            clearTimeout(timeout);
+            ball.draw(topX, topY);
+        });
+
         var canvas = {
             element: document.getElementById('canvas'),
             width: $(".wrapper").width(),
-            height: $("#page-wrapper").height() - 180,
+            height: $("#page-wrapper").height() - 230,
             initialize: function () {
                 this.element.style.width = this.width + 'px';
                 this.element.style.height = this.height + 'px';
@@ -35,8 +70,8 @@ class BouncingBall extends Component {
 
         var ball = {
             element: document.createElement('div'),
-            width: 40,
-            height: 40,
+            width: 20,
+            height: 20,
             dx: 4,
             dy: 3,
             initialize: function () {
@@ -58,15 +93,18 @@ class BouncingBall extends Component {
                 }
             },
             draw: function (x, y) {
+                topX = x;
+                topY = y;
                 this.moveTo(x, y);
                 var ball = this;
-                setTimeout(function () {
+                timeout = setTimeout(function () {
                     ball.changeDirectionIfNecessary(x, y);
                     ball.draw(x + ball.dx, y + ball.dy);
-                }, 1000 / 60);
+                }, ballSpeed);
             }
         };
 
+        setBallSpeed();
         canvas.initialize();
         ball.initialize();
         ball.draw(0, 0);

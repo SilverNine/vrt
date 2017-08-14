@@ -23,6 +23,7 @@ class Navigation extends Component {
                     <ul className="nav metismenu" id="side-menu" ref="menu">
                         <li className="nav-header">
                             <div className="dropdown profile-element"> <span>
+                                <img alt="image" className="img-circle" src={"http://webapplayers.com/inspinia_admin-v2.7.1/img/profile_small.jpg"}/>
                              </span>
                                 <a data-toggle="dropdown" className="dropdown-toggle" href="#">
                             <span className="clear"> <span className="block m-t-xs"> <strong className="font-bold">Example user</strong>
@@ -39,7 +40,7 @@ class Navigation extends Component {
                             <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">환영합니다</span></Link>
                         </li>
                         <li className={this.activeRoute("/bouncingBall")}>
-                            <Link to="/bouncingBall"><i className="fa fa-bullseye"></i> <span className="nav-label">움직이는 공</span></Link>
+                            <Link to="/bouncingBall"><i className="fa fa-bullseye"></i> <span className="nav-label">움직이는 공 ( 대각선 )</span></Link>
                         </li>
                         {/*<li className={this.activeRoute("/minor")}>
                             <Link to="/minor"><i className="fa fa-th-large"></i> <span className="nav-label">Minor view</span></Link>

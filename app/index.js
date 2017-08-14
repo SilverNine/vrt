@@ -4,6 +4,7 @@ import { Router, hashHistory } from 'react-router';
 import routes from './config/routes';
 
 import jquery from 'jquery';
+import noUiSlider from 'nouislider';
 import metismenu from 'metismenu';
 import bootstrap from 'bootstrap';
 import pace from 'pace';
@@ -32,13 +33,12 @@ import './../public/styles/plugins/select2/select2.min.css'
 import './../public/styles/plugins/touchspin/jquery.bootstrap-touchspin.min.css'
 import './../public/styles/plugins/dualListbox/bootstrap-duallistbox.min.css'
 import './../public/styles/animate.css'
-import './../public/js/inspinia.js'
+/*import './../public/js/inspinia.js'
 import './../public/js/plugins/slimscroll/jquery.slimscroll.min.js'
 import './../public/js/plugins/chosen/chosen.jquery.js'
 import './../public/js/plugins/jsKnob/jquery.knob.js'
 import './../public/js/plugins/jasny/jasny-bootstrap.min.js'
 import './../public/js/plugins/datapicker/bootstrap-datepicker.js'
-import './../public/js/plugins/nouslider/jquery.nouislider.min.js'
 import './../public/js/plugins/switchery/switchery.js'
 import './../public/js/plugins/ionRangeSlider/ion.rangeSlider.min.js'
 import './../public/js/plugins/iCheck/icheck.min.js'
@@ -49,7 +49,7 @@ import './../public/js/plugins/cropper/cropper.min.js'
 import './../public/js/plugins/select2/select2.full.min.js'
 import './../public/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js'
 import './../public/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js'
-import './../public/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js'
+import './../public/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js'*/
 
 ReactDOM.render(
 <Router history={hashHistory}>{routes}</Router>,

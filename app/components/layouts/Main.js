@@ -3,6 +3,7 @@ import Progress from '../common/Progress';
 import Navigation from '../common/Navigation';
 import Footer from '../common/Footer';
 import TopHeader from '../common/TopHeader';
+import Header from '../common/Header';
 import { correctHeight, detectBody } from './Helpers';
 
 class Main extends React.Component {
@@ -17,6 +18,8 @@ class Main extends React.Component {
                 <div id="page-wrapper" className={wrapperClass}>
 
                     <TopHeader />
+
+                    {/*<Header />*/}
 
                     {this.props.children}
 
