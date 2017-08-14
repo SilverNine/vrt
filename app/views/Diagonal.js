@@ -3,7 +3,7 @@ import $ from 'jquery';
 import noUiSlider from 'nouislider';
 import Slider from '../components/common/Slider';
 
-class BouncingBall extends Component {
+class Diagonal extends Component {
     render() {
         return (
             <div className="wrapper wrapper-content animated fadeInRight">
@@ -104,4 +104,4 @@ class BouncingBall extends Component {
     }
 }
 
-export default BouncingBall
+export default Diagonal

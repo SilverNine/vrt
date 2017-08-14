@@ -4,7 +4,7 @@ import Blank from '../components/layouts/Blank';
 
 import MainView from '../views/Main';
 import MinorView from '../views/Minor';
-import BouncingBallView from '../views/BouncingBall';
+import DiagonalView from '../views/Diagonal';
 
 import { Route, Router, IndexRedirect, browserHistory} from 'react-router';
 
@@ -14,7 +14,7 @@ export default (
             <IndexRedirect to="/main" />
             <Route path="main" component={MainView}> </Route>
             {/*<Route path="minor" component={MinorView}> </Route>*/}
-            <Route path="bouncingBall" component={BouncingBallView}> </Route>
+            <Route path="diagonal" component={DiagonalView}> </Route>
         </Route>
     </Router>
 
